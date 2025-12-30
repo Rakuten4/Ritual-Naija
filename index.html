@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>RITUAL NAIJA PUZZLE CHALLENGE</title>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="body-bg">
+	<div class="app">
+		<header>
+			<h1 class="title">RITUAL NAIJA PUZZLE CHALLENGE <span class="flag" aria-hidden="true"> 
+				<!-- Nigeria flag: simple inline SVG -->
+				<svg width="20" height="14" viewBox="0 0 30 20" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle">
+				  <rect width="30" height="20" fill="#008753"/>
+				  <rect x="10" width="10" height="20" fill="#fff"/>
+				  <rect width="30" height="20" fill="none" stroke="rgba(0,0,0,0.05)"/>
+				</svg>
+			</span></h1>
+			<div class="controls">
+				<label>Image: <select id="imageSelect"></select></label>
+				<button id="startBtn">Start</button>
+				<button id="shuffleBtn">Shuffle</button>
+				<button id="nextBtn" disabled>Next</button>
+				<div id="timer" class="timer">06:00</div>
+				<span id="status"></span>
+			</div>
+		</header>
+
+		<main>
+			<div id="puzzleWrapper">
+			<div class="referenceInline">
+				<div class="referenceTitle">Targeted solution</div>
+				<div id="reference" class="reference inline" aria-hidden="true"></div>
+			</div>
+				<div id="puzzle" class="puzzle"></div>
+			</div>
+			<p class="hint">Click two pieces to swap them. Arrange to original image.</p>
+		</main>
+	</div>
+
+	<script>
+		const IMAGES = [
+			"images/puzzle 1.jpg",
+			"images/puzzle 2.jpg",
+			"images/puzzle 3.jpg"
+		];
+	</script>
+	<script src="puzzle.js"></script>
+</body>
+</html>

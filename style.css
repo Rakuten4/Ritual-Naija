@@ -1,0 +1,28 @@
+.body-bg{background-image: url('images/momo.jpeg');background-size: cover;background-position: center}
+* { box-sizing: border-box; }
+body { font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, Arial; margin:0; color:#111 }
+.app { max-width:980px; margin:24px auto; padding:18px; background: rgba(255,255,255,0.94); border-radius:10px }
+header { display:flex; align-items:center; justify-content:space-between; gap:12px }
+header h1 { margin:0; font-size:20px; font-family: 'Merriweather', serif; font-weight:700 }
+.title .flag { margin-left:8px; display:inline-block }
+.controls { display:flex; gap:8px; align-items:center }
+.controls select, .controls button { padding:8px 10px; font-size:14px; border-radius:8px; border:1px solid #e6e9ec }
+.controls button { background: linear-gradient(180deg,#4f6ef8,#3456d6); color:#fff; border:0 }
+.controls button[disabled]{ opacity:0.6 }
+.timer { font-weight:700; margin-left:6px; color:#222; background:#fff; padding:6px 8px; border-radius:8px; box-shadow:0 1px 3px rgba(0,0,0,0.06) }
+.referenceInline { text-align:center; margin-top:8px }
+.referenceInline .referenceTitle { font-size:13px; font-weight:700; color:#333; margin-bottom:6px }
+.referenceInline .reference.inline { width:160px; height:110px; margin:0 auto 10px; border-radius:6px; background-size:cover; background-position:center; box-shadow:0 2px 6px rgba(0,0,0,0.12) }
+.puzzleWrapper { margin-top:16px; display:flex; gap:8px; align-items:flex-start; justify-content:center }
+.puzzle { flex: 1 1 640px; max-width:720px; height:360px; background:#222; display:flex; flex-wrap:wrap; position:relative; border-radius:6px; overflow:hidden }
+.piece { background-repeat:no-repeat; background-size:cover; cursor:pointer; border:1px solid rgba(255,255,255,0.06); background-color:#333 }
+.piece.selected { outline:3px solid #f39c12 }
+.puzzle.disabled .piece { pointer-events:none; opacity:0.6 }
+.hint { color:#555; margin-top:8px }
+#status { margin-left:8px; font-weight:600 }
+@media (max-width:960px) {
+  .puzzle { width:720px }
+}
+@media (max-width:720px) {
+  .puzzle { width:100%; }
+}
