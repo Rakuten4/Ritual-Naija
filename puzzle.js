@@ -27,7 +27,8 @@
     imageSelect.value = currentImage;
     imageSelect.addEventListener('change', ()=>{
       currentImage = imageSelect.value;
-      build(false);
+      // always shuffle when the user selects a different image
+      build(true);
       updateReference();
     });
   }
